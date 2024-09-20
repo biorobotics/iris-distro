@@ -20,7 +20,8 @@ set_target_properties(iris_mosek PROPERTIES
   PUBLIC_HEADER iris/iris_mosek.h
   SOVERSION 0)
 target_include_directories(iris_mosek
-  PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>)
+  PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
+          ${MOSEK_INCLUDE_DIRS})
 target_link_libraries(iris_mosek iris_geometry mosek)
 
 add_library(iris SHARED iris.cpp IRISProblem.cpp)
