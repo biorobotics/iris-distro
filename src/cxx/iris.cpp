@@ -117,6 +117,8 @@ void separating_hyperplanes(const std::vector<Eigen::MatrixXd> obstacle_pts, con
     }
   }
 
+  MSK_deleteenv(&env);
+
   // Eigen::MatrixXd A = polyhedron.getA();
   // Eigen::VectorXd b = polyhedron.getB();
   // A.resize(planes.size(), dim);

@@ -447,7 +447,7 @@ void closest_point_in_convex_hull(const MatrixXd &Points, VectorXd &result, MSKe
       }
       throw(InnerEllipsoidInfeasibleError());
   }
-
+  MSK_deletetask(&task);
   if (!existing_env) {
     MSK_deleteenv(env);
     free(env);
